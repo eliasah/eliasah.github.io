@@ -5,222 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elias Abou Haydar - Data Science Practitioner</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-color: #0a192f;
-            --secondary-color: #112240;
-            --text-color: #8892b0;
-            --highlight-color: #64ffda;
-            --header-color: #ccd6f6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: linear-gradient(to bottom right, var(--primary-color), #0f2c5c);
-        }
-
-        header {
-            background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
-            padding: 4rem 2rem;
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .profile-img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            margin-bottom: 1.5rem;
-            border: 3px solid var(--highlight-color);
-            transition: transform 0.3s ease;
-        }
-
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-
-        h1 {
-            color: var(--header-color);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .title {
-            color: var(--highlight-color);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-        }
-
-        .social-links {
-            margin-top: 1.5rem;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            margin: 0 0.8rem;
-            font-size: 1.5rem;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            transform: scale(1);
-        }
-
-        .social-links a:hover {
-            color: var(--highlight-color);
-            transform: scale(1.2);
-        }
-
-        main {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            background-color: var(--secondary-color);
-            padding: 2.5rem;
-            border-radius: 8px;
-            margin-bottom: 3.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(100, 255, 218, 0.15);
-        }
-
-        h2 {
-            color: var(--header-color);
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--highlight-color);
-            padding-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-            transition: transform 0.2s ease;
-        }
-
-        .experience-item:hover {
-            transform: translateX(10px);
-        }
-
-        .experience-item h3 {
-            color: var(--highlight-color);
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.5px;
-        }
-
-        .experience-item p {
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .skill {
-            background-color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            border: 1px solid var(--highlight-color);
-            transition: all 0.3s ease;
-        }
-
-        .skill:hover {
-            transform: translateY(-2px);
-            background-color: var(--highlight-color);
-            color: var(--primary-color);
-        }
-
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .content-card {
-            background-color: var(--primary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--highlight-color);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .content-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.1);
-        }
-
-        .content-card h3 {
-            color: var(--header-color);
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-        }
-
-        .project-card {
-            background-color: var(--secondary-color);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.1);
-        }
-
-        .project-card h3 a {
-            color: var(--highlight-color);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .project-card h3 a:hover {
-            color: var(--header-color);
-        }
-
-        .project-meta {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--text-color);
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 2rem 1rem;
-            }
-
-            .profile-img {
-                width: 150px;
-                height: 150px;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
+<nav>
+    <div class="nav-content">
+        <a href="#about">About</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#opensource">Open Source</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#community">Community</a>
+    </div>
+</nav>
 
 <header>
     <img src="images/profile.png" alt="Elias Abou Haydar" class="profile-img">
@@ -237,16 +34,17 @@
 </header>
 
 <main>
-    <section>
+    <section id="about">
         <h2>About Me</h2>
         <p>With over a decade of experience in data science and engineering, I specialize in building scalable data
             solutions that drive business value. My expertise spans from recommendation systems and marketing
             optimization to generative AI applications. I'm passionate about leveraging cutting-edge technologies,
             particularly in the GenAI space, to solve complex business challenges. Beyond building solutions, I enjoy
             contributing to the tech community through technical writing and open-source contributions, sharing insights
-            about data science, ML, and AI applications.</p></section>
+            about data science, ML, and AI applications.</p>
+    </section>
 
-    <section>
+    <section id="expertise">
         <h2>Areas of Expertise</h2>
         <div class="experience-item">
             <h3>Data Science Leadership</h3>
@@ -268,72 +66,38 @@
         </div>
     </section>
 
-    <section>
+    <section id="opensource">
+        <h2>Open Source Contributions</h2>
+        <div class="experience-item">
+            <h3><a href="https://github.com/awesome-spark/awesome-spark" target="_blank">Awesome Spark</a></h3>
+            <p>Member and contributor to the Awesome Spark curated list of useful resources for Apache Spark, helping maintain a vital resource for the Spark community.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Stack Overflow Contributions</h3>
+            <p>Top 3 all-time answerer for Apache Spark on Stack Overflow, actively helping developers solve complex problems with distributed computing and data processing.</p>
+        </div>
+    </section>
+
+    <section id="writing">
+        <h2>Latest Articles</h2>
+        <div id="medium-posts" class="article-grid">
+            <div class="content-card">
+                <h3><a href="https://medium.com/@eliasah/delving-deeper-into-recommender-systems-from-basics-to-state-of-the-art-d92ee8e277f2" target="_blank">Delving Deeper into Recommender Systems: From Basics to State of the Art</a></h3>
+                <p>A comprehensive guide exploring recommender systems foundations, modern architectures, and advanced techniques for building effective recommendation engines.</p>
+            </div>
+            <div class="content-card">
+                <h3><a href="https://medium.com/@eliasah/deep-dive-into-matrix-factorization-for-recommender-systems-from-basics-to-implementation-79e4f1ea1660" target="_blank">Deep Dive into Matrix Factorization for Recommender Systems</a></h3>
+                <p>Detailed exploration of matrix factorization techniques, from theoretical foundations to practical implementation strategies for recommendation systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
         <h2>Latest GitHub Projects</h2>
         <div id="projects-container"></div>
     </section>
 
-    <style>
-        .project-card {
-           background-color: var(--secondary-color);
-           padding: 1.5rem;
-           border-radius: 8px;
-           margin-bottom: 1rem;
-        }
-
-        .project-card h3 a {
-           color: var(--highlight-color);
-           text-decoration: none;
-        }
-
-        .project-card h3 a:hover {
-           text-decoration: underline;
-        }
-
-        .project-meta {
-           margin-top: 0.5rem;
-           font-size: 0.9rem;
-           color: var(--text-color);
-        }
-    </style>
-
-    <script>
-        async function fetchGitHubProjects() {
-           const username = 'eliasah';
-           const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&direction=desc`;
-           const container = document.getElementById('projects-container');
-
-           try {
-               const response = await fetch(apiUrl);
-               if (!response.ok) throw new Error('Failed to fetch projects');
-               const repos = await response.json();
-
-               const filteredRepos = repos
-                   .filter(repo => repo.name !== 'eliasah.github.io' && !repo.fork)
-                   .slice(0, 3);
-
-               filteredRepos.forEach(repo => {
-                   const projectElement = document.createElement('div');
-                   projectElement.classList.add('project-card');
-                   projectElement.innerHTML = `
-                       <h3>
-                           <a href="${repo.html_url}" target="_blank">
-                               ${repo.name}
-                           </a>
-                       </h3>
-                       <p>${repo.description || 'No description available.'}</p>
-                       ${repo.language ? `<div class="project-meta">${repo.language}</div>` : ''}
-                   `;
-                   container.appendChild(projectElement);
-               });
-           } catch (error) {
-               container.innerHTML = '<div class="project-card"><p>Error loading projects. Please try again later.</p></div>';
-           }
-        }
-        fetchGitHubProjects();
-    </script>
-
-    <section>
+    <section id="skills">
         <h2>Technical Skills</h2>
         <div class="skills">
             <span class="skill">Recommender Systems</span>
@@ -352,7 +116,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="community">
         <h2>Writing & Community</h2>
         <div class="article-grid">
             <div class="content-card">
@@ -361,7 +125,7 @@
                     articles focus on practical insights and experiences in building data-driven solutions.</p>
             </div>
             <div class="content-card">
-                <h3>Community Contribution</h3>
+                <h3>Community Impact</h3>
                 <p>Active contributor to technical discussions on Stack Overflow, Quora, and various technical forums,
                     sharing knowledge and helping others in the data science community.</p>
             </div>
@@ -369,5 +133,48 @@
     </section>
 </main>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+<script>
+    ScrollReveal().reveal('section', {
+        delay: 200,
+        distance: '20px',
+        origin: 'bottom',
+        interval: 100
+    });
+
+    async function fetchGitHubProjects() {
+        const username = 'eliasah';
+        const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&direction=desc`;
+        const container = document.getElementById('projects-container');
+
+        try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error('Failed to fetch projects');
+            const repos = await response.json();
+
+            const filteredRepos = repos
+                .filter(repo => repo.name !== 'eliasah.github.io' && !repo.fork)
+                .slice(0, 3);
+
+            filteredRepos.forEach(repo => {
+                const projectElement = document.createElement('div');
+                projectElement.classList.add('project-card');
+                projectElement.innerHTML = `
+                    <h3>
+                        <a href="${repo.html_url}" target="_blank">
+                            ${repo.name}
+                        </a>
+                    </h3>
+                    <p>${repo.description || 'No description available.'}</p>
+                    ${repo.language ? `<div class="project-meta">${repo.language}</div>` : ''}
+                `;
+                container.appendChild(projectElement);
+            });
+        } catch (error) {
+            container.innerHTML = '<div class="project-card"><p>Error loading projects. Please try again later.</p></div>';
+        }
+    }
+    fetchGitHubProjects();
+</script>
 </body>
 </html>
