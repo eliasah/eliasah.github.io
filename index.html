@@ -24,13 +24,14 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: var(--text-color);
-            background-color: var(--primary-color);
+            background: linear-gradient(to bottom right, var(--primary-color), #0f2c5c);
         }
 
         header {
-            background-color: var(--secondary-color);
+            background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
             padding: 4rem 2rem;
             text-align: center;
+            margin-bottom: 4rem;
         }
 
         .profile-img {
@@ -39,18 +40,26 @@
             border-radius: 50%;
             margin-bottom: 1.5rem;
             border: 3px solid var(--highlight-color);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
         }
 
         h1 {
             color: var(--header-color);
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
         }
 
         .title {
             color: var(--highlight-color);
             font-size: 1.2rem;
             margin-bottom: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
 
         .social-links {
@@ -62,11 +71,13 @@
             margin: 0 0.8rem;
             font-size: 1.5rem;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s ease;
+            transform: scale(1);
         }
 
         .social-links a:hover {
             color: var(--highlight-color);
+            transform: scale(1.2);
         }
 
         main {
@@ -79,7 +90,14 @@
             background-color: var(--secondary-color);
             padding: 2.5rem;
             border-radius: 8px;
-            margin-bottom: 2.5rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(100, 255, 218, 0.15);
         }
 
         h2 {
@@ -87,21 +105,27 @@
             margin-bottom: 1.5rem;
             border-bottom: 2px solid var(--highlight-color);
             padding-bottom: 0.5rem;
+            letter-spacing: -0.5px;
         }
 
         .experience-item {
             margin-bottom: 2rem;
+            transition: transform 0.2s ease;
+        }
+
+        .experience-item:hover {
+            transform: translateX(10px);
         }
 
         .experience-item h3 {
             color: var(--highlight-color);
             margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
         }
 
-        .experience-item .position {
-            color: var(--header-color);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
+        .experience-item p {
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
 
         .skills {
@@ -116,6 +140,13 @@
             border-radius: 20px;
             font-size: 0.9rem;
             border: 1px solid var(--highlight-color);
+            transition: all 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-2px);
+            background-color: var(--highlight-color);
+            color: var(--primary-color);
         }
 
         .article-grid {
@@ -129,11 +160,47 @@
             padding: 1.5rem;
             border-radius: 8px;
             border: 1px solid var(--highlight-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.1);
         }
 
         .content-card h3 {
             color: var(--header-color);
             margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .project-card {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(100, 255, 218, 0.1);
+        }
+
+        .project-card h3 a {
+            color: var(--highlight-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .project-card h3 a:hover {
+            color: var(--header-color);
+        }
+
+        .project-meta {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
         }
 
         @media (max-width: 768px) {
@@ -153,6 +220,8 @@
     </style>
 </head>
 <body>
+
+
 <header>
     <img src="images/profile.png" alt="Elias Abou Haydar" class="profile-img">
     <h1>Elias Abou Haydar</h1>
@@ -170,23 +239,99 @@
 <main>
     <section>
         <h2>About Me</h2>
-        <p>With over a decade of experience in data science and engineering, I specialize in building scalable data solutions that drive business value. My expertise spans from recommendation systems and marketing optimization to generative AI applications. I'm passionate about leveraging cutting-edge technologies, particularly in the GenAI space, to solve complex business challenges. Beyond building solutions, I enjoy contributing to the tech community through technical writing and open-source contributions, sharing insights about data science, ML, and AI applications.</p>    </section>
+        <p>With over a decade of experience in data science and engineering, I specialize in building scalable data
+            solutions that drive business value. My expertise spans from recommendation systems and marketing
+            optimization to generative AI applications. I'm passionate about leveraging cutting-edge technologies,
+            particularly in the GenAI space, to solve complex business challenges. Beyond building solutions, I enjoy
+            contributing to the tech community through technical writing and open-source contributions, sharing insights
+            about data science, ML, and AI applications.</p></section>
 
     <section>
         <h2>Areas of Expertise</h2>
         <div class="experience-item">
             <h3>Data Science Leadership</h3>
-            <p>Driving data science initiatives from ideation to production, with a focus on both traditional ML and generative AI applications. Building and leading experimentation frameworks while fostering a data-driven culture that delivers measurable business impact.</p>
+            <p>Driving data science initiatives from ideation to production, with a focus on both traditional ML and
+                generative AI applications. Building and leading experimentation frameworks while fostering a
+                data-driven culture that delivers measurable business impact.</p>
         </div>
         <div class="experience-item">
             <h3>Recommender Systems</h3>
-            <p>Specializing in building and optimizing recommendation engines at scale. Deep expertise in addressing cold start challenges, improving personalization effectiveness, and leveraging cutting-edge technologies including generative AI to enhance recommendation quality.</p>
+            <p>Specializing in building and optimizing recommendation engines at scale. Deep expertise in addressing
+                cold start challenges, improving personalization effectiveness, and leveraging cutting-edge technologies
+                including generative AI to enhance recommendation quality.</p>
         </div>
         <div class="experience-item">
             <h3>Machine Learning Infrastructure</h3>
-            <p>Designing and implementing scalable ML infrastructure that powers both traditional and generative AI applications. Focus on robust production systems, optimized data pipelines, and maintaining high performance at scale.</p>
+            <p>Designing and implementing scalable ML infrastructure that powers both traditional and generative AI
+                applications. Focus on robust production systems, optimized data pipelines, and maintaining high
+                performance at scale.</p>
         </div>
     </section>
+
+    <section>
+        <h2>Latest GitHub Projects</h2>
+        <div id="projects-container"></div>
+    </section>
+
+    <style>
+        .project-card {
+           background-color: var(--secondary-color);
+           padding: 1.5rem;
+           border-radius: 8px;
+           margin-bottom: 1rem;
+        }
+
+        .project-card h3 a {
+           color: var(--highlight-color);
+           text-decoration: none;
+        }
+
+        .project-card h3 a:hover {
+           text-decoration: underline;
+        }
+
+        .project-meta {
+           margin-top: 0.5rem;
+           font-size: 0.9rem;
+           color: var(--text-color);
+        }
+    </style>
+
+    <script>
+        async function fetchGitHubProjects() {
+           const username = 'eliasah';
+           const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&direction=desc`;
+           const container = document.getElementById('projects-container');
+
+           try {
+               const response = await fetch(apiUrl);
+               if (!response.ok) throw new Error('Failed to fetch projects');
+               const repos = await response.json();
+
+               const filteredRepos = repos
+                   .filter(repo => repo.name !== 'eliasah.github.io' && !repo.fork)
+                   .slice(0, 3);
+
+               filteredRepos.forEach(repo => {
+                   const projectElement = document.createElement('div');
+                   projectElement.classList.add('project-card');
+                   projectElement.innerHTML = `
+                       <h3>
+                           <a href="${repo.html_url}" target="_blank">
+                               ${repo.name}
+                           </a>
+                       </h3>
+                       <p>${repo.description || 'No description available.'}</p>
+                       ${repo.language ? `<div class="project-meta">${repo.language}</div>` : ''}
+                   `;
+                   container.appendChild(projectElement);
+               });
+           } catch (error) {
+               container.innerHTML = '<div class="project-card"><p>Error loading projects. Please try again later.</p></div>';
+           }
+        }
+        fetchGitHubProjects();
+    </script>
 
     <section>
         <h2>Technical Skills</h2>
@@ -212,14 +357,17 @@
         <div class="article-grid">
             <div class="content-card">
                 <h3>Technical Writing</h3>
-                <p>I regularly write about Recommender Systems, Data Science, and Marketing Analytics on Medium. My articles focus on practical insights and experiences in building data-driven solutions.</p>
+                <p>I regularly write about Recommender Systems, Data Science, and Marketing Analytics on Medium. My
+                    articles focus on practical insights and experiences in building data-driven solutions.</p>
             </div>
             <div class="content-card">
                 <h3>Community Contribution</h3>
-                <p>Active contributor to technical discussions on Stack Overflow, Quora, and various technical forums, sharing knowledge and helping others in the data science community.</p>
+                <p>Active contributor to technical discussions on Stack Overflow, Quora, and various technical forums,
+                    sharing knowledge and helping others in the data science community.</p>
             </div>
         </div>
     </section>
 </main>
+
 </body>
 </html>
