@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elias Abou Haydar - Data Science Practitioner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0a192f;
+            --secondary-color: #112240;
+            --text-color: #8892b0;
+            --highlight-color: #64ffda;
+            --header-color: #ccd6f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+        }
+
+        header {
+            background-color: var(--secondary-color);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--highlight-color);
+        }
+
+        h1 {
+            color: var(--header-color);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .title {
+            color: var(--highlight-color);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            margin: 0 0.8rem;
+            font-size: 1.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--highlight-color);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background-color: var(--secondary-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            color: var(--header-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--highlight-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+
+        .experience-item h3 {
+            color: var(--highlight-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-item .position {
+            color: var(--header-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill {
+            background-color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--highlight-color);
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .content-card {
+            background-color: var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--highlight-color);
+        }
+
+        .content-card h3 {
+            color: var(--header-color);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 2rem 1rem;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="images/profile.png" alt="Elias Abou Haydar" class="profile-img">
+    <h1>Elias Abou Haydar</h1>
+    <p class="title">Data Science & ML Professional</p>
+    <p>Data Science Practitioner | Technical Writer | Open Source Contributor</p>
+    <div class="social-links">
+        <a href="https://github.com/eliasah" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/eliasah" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://stackoverflow.com/users/3415409/eliasah" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+        <a href="https://medium.com/@eliasah" target="_blank"><i class="fab fa-medium"></i></a>
+        <a href="https://www.quora.com/profile/Elias-Abou-Haydar" target="_blank"><i class="fab fa-quora"></i></a>
+    </div>
+</header>
+
+<main>
+    <section>
+        <h2>About Me</h2>
+        <p>With over a decade of experience in data science and engineering, I specialize in building scalable data solutions that drive business value. My expertise spans from recommendation systems and marketing optimization to generative AI applications. I'm passionate about leveraging cutting-edge technologies, particularly in the GenAI space, to solve complex business challenges. Beyond building solutions, I enjoy contributing to the tech community through technical writing and open-source contributions, sharing insights about data science, ML, and AI applications.</p>    </section>
+
+    <section>
+        <h2>Areas of Expertise</h2>
+        <div class="experience-item">
+            <h3>Data Science Leadership</h3>
+            <p>Driving data science initiatives from ideation to production, with a focus on both traditional ML and generative AI applications. Building and leading experimentation frameworks while fostering a data-driven culture that delivers measurable business impact.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Recommender Systems</h3>
+            <p>Specializing in building and optimizing recommendation engines at scale. Deep expertise in addressing cold start challenges, improving personalization effectiveness, and leveraging cutting-edge technologies including generative AI to enhance recommendation quality.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Machine Learning Infrastructure</h3>
+            <p>Designing and implementing scalable ML infrastructure that powers both traditional and generative AI applications. Focus on robust production systems, optimized data pipelines, and maintaining high performance at scale.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills">
+            <span class="skill">Recommender Systems</span>
+            <span class="skill">GenAI</span>
+            <span class="skill">LLMs</span>
+            <span class="skill">LangChain</span>
+            <span class="skill">HuggingFace</span>
+            <span class="skill">Python</span>
+            <span class="skill">Scala</span>
+            <span class="skill">TensorFlow</span>
+            <span class="skill">AWS</span>
+            <span class="skill">Databricks</span>
+            <span class="skill">Distributed Computing</span>
+            <span class="skill">Data Strategy</span>
+            <span class="skill">A/B Testing</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Writing & Community</h2>
+        <div class="article-grid">
+            <div class="content-card">
+                <h3>Technical Writing</h3>
+                <p>I regularly write about Recommender Systems, Data Science, and Marketing Analytics on Medium. My articles focus on practical insights and experiences in building data-driven solutions.</p>
+            </div>
+            <div class="content-card">
+                <h3>Community Contribution</h3>
+                <p>Active contributor to technical discussions on Stack Overflow, Quora, and various technical forums, sharing knowledge and helping others in the data science community.</p>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>
